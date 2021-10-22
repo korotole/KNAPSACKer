@@ -10,8 +10,8 @@ struct Node
     //            node (including this node)
     // bound ---> Upper bound of maximum profit in subtree
     //            of this node/
-    int16_t level, profit, bound;
-    uint16_t weight;
+    int32_t level, profit, bound;
+    uint32_t weight;
 };
   
 // Comparison function to sort Item according to
@@ -60,7 +60,7 @@ inline int bound(Node u, uint8_t n, uint16_t M, Item *items)
 }
   
 // Returns maximum profit we can get with capacity M
-uint32_t BranchAndBound::Knapsack(uint8_t n, uint16_t M, Item *items, TaskType type, int32_t B) {
+uint32_t BranchAndBound::Knapsack(uint8_t n, int32_t M, Item *items, TaskType type, int32_t B) {
     // sorting Item on basis of value per unit weight
     std::sort(items, items + n, cmp);
   
@@ -79,6 +79,8 @@ uint32_t BranchAndBound::Knapsack(uint8_t n, uint16_t M, Item *items, TaskType t
     int maxProfit = 0;
     while (!Q.empty())
     {
+        if(type == TaskType::desicive && maxProfit >= B) break;
+
         // Dequeue a node
         u = Q.front();
         Q.pop();
@@ -124,8 +126,6 @@ uint32_t BranchAndBound::Knapsack(uint8_t n, uint16_t M, Item *items, TaskType t
         v.bound = bound(v, n, M, items);
         if (v.bound > maxProfit)
             Q.push(v);
-
-       // if(type == TaskType::desicive && maxProfit >= B) break;
     }
   
     return maxProfit;

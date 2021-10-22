@@ -12,7 +12,7 @@ class ExecutionController {
     int16_t id = 0; 
     int32_t B = 0;  // požadovana minimální cena
     uint8_t n = 0;  // počet věcí
-    uint16_t M = 0; // kapacita batohu
+    int32_t M = 0; // kapacita batohu
     
     Item *items = 0;
     TaskType type = TaskType::desicive;
@@ -20,6 +20,7 @@ class ExecutionController {
   public:
     ExecutionController(const char *type, const char *line) {
         GetKnapsackData(line);
+        GetTaskType(type);
     };
 
     ~ExecutionController() {

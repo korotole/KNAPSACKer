@@ -2,7 +2,7 @@
  
 // Returns the maximum value that
 // can be put in a knapsack of capacity M
-uint32_t Dynamic::Knapsack(uint8_t n, uint16_t M, Item *items, TaskType type, int32_t B){
+uint32_t Dynamic::Knapsack(uint8_t n, int32_t M, Item *items, TaskType type, int32_t B){
     int i, w;
     int K[n + 1][M + 1];
  

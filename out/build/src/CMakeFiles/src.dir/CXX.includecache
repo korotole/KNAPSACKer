@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/korale/Desktop/KOP/src/BranchAndBound.cpp
+BranchAndBound.h
+/home/korale/Desktop/KOP/src/BranchAndBound.h
+
+/home/korale/Desktop/KOP/src/BranchAndBound.h
+Common.h
+/home/korale/Desktop/KOP/src/Common.h
+
 /home/korale/Desktop/KOP/src/Common.h
 stdint.h
 -
@@ -23,12 +31,4 @@ string.h
 -
 bits/stdc++.h
 -
-
-/home/korale/Desktop/KOP/src/Dynamic.cpp
-Dynamic.h
-/home/korale/Desktop/KOP/src/Dynamic.h
-
-/home/korale/Desktop/KOP/src/Dynamic.h
-Common.h
-/home/korale/Desktop/KOP/src/Common.h
 

@@ -2,10 +2,10 @@
  
 // Returns the maximum value that
 // can be put in a knapsack of capacity M
-uint32_t BruteForce::Knapsack(uint8_t n, uint16_t M, Item *items, TaskType type, int32_t B=0){
+uint32_t BruteForce::Knapsack(uint8_t n, int32_t M, Item *items, TaskType type, int32_t B){
  
     // Base Case
-    if (n == 0 || M == 0 /*|| (B <= 0 && type == TaskType::desicive)*/)   return 0;
+    if (n == 0 || M <= 0 || (B <= 0 && type == TaskType::desicive))   return 0;
  
     // If weight of the nth item is more
     // than Knapsack capacity M, then
@@ -18,7 +18,7 @@ uint32_t BruteForce::Knapsack(uint8_t n, uint16_t M, Item *items, TaskType type,
     // (2) not included
     else    
         return std::max( 
-                        (uint32_t) (items[n - 1].value + BruteForce::Knapsack(n-1, M - items[n - 1].weight, items, type, B - items[n - 1].weight)),
+                        (uint32_t) (items[n - 1].value + BruteForce::Knapsack(n-1, M - items[n - 1].weight, items, type, B - items[n - 1].value)),
                         BruteForce::Knapsack(n-1, M, items, type, B)
                     );
 }

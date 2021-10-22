@@ -10,7 +10,7 @@ void ExecutionController::GetKnapsackData(const char *line){
         exit(EXIT_FAILURE);
     }
 
-    fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNu16 "%" SCNd32, &(this->id), &(this->n), &(this->M), &(this->B));
+    fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNd32 "%" SCNd32, &(this->id), &(this->n), &(this->M), &(this->B));
 
     this->items = new Item[this->n] ();    // allocate array of items of desired size
 
