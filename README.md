@@ -1,6 +1,6 @@
 ## KNAPSACKer
 
-**KNAPSACKer** is a universal toolset for solving different types of knapsack problems mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University.
+**KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University.
 
 ### Brief overview
 
@@ -33,7 +33,7 @@ NOTE: since the projet is being developed under the linux platform, some buildin
 
 ### Run KNAPSACKer from the command line
 
-In order to run the project, `run.sh` or `v-run.sh` (valgrind-run, to trace memory behavoiur) script must be executed from the root directory of a project.
+In order to run the project, `run.sh e/c/d 0/1/2` or `v-run.sh` (valgrind-run, to trace memory behavoiur) script must be executed from the root directory of a project.
 
 
 
