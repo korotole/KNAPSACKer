@@ -16,7 +16,7 @@ struct Node
   
 // Comparison function to sort Item according to
 // val/weight ratio
-bool cmp(Item a, Item b)
+inline bool cmp(Item a, Item b)
 {
     double r1 = (double)a.value / a.weight;
     double r2 = (double)b.value / b.weight;
@@ -26,7 +26,7 @@ bool cmp(Item a, Item b)
 // Returns bound of profit in subtree rooted with u.
 // This function mainly uses Greedy solution to find
 // an upper bound on maximum profit.
-int bound(Node u, uint8_t n, uint16_t M, Item *items)
+inline int bound(Node u, uint8_t n, uint16_t M, Item *items)
 {
     // if weight overcomes the knapsack capacity, return
     // 0 as expected bound
@@ -60,7 +60,7 @@ int bound(Node u, uint8_t n, uint16_t M, Item *items)
 }
   
 // Returns maximum profit we can get with capacity M
-uint16_t BranchAndBound::Knapsack(uint8_t n, uint16_t M, Item *items, TaskType type, int16_t B) {
+uint32_t BranchAndBound::Knapsack(uint8_t n, uint16_t M, Item *items, TaskType type, int32_t B) {
     // sorting Item on basis of value per unit weight
     std::sort(items, items + n, cmp);
   

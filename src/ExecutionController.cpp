@@ -10,7 +10,7 @@ void ExecutionController::GetKnapsackData(const char *line){
         exit(EXIT_FAILURE);
     }
 
-    fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNu16 "%" SCNd16, &(this->id), &(this->n), &(this->M), &(this->B));
+    fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNu16 "%" SCNd32, &(this->id), &(this->n), &(this->M), &(this->B));
 
     this->items = new Item[this->n] ();    // allocate array of items of desired size
 
@@ -55,5 +55,5 @@ void ExecutionController::SolveKnapsackProblem(uint8_t method) {
     auto stop = std::chrono::high_resolution_clock::now();
 
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    std::cout << this->id << ";\t" << res << ";\t" << duration.count() << ";" << std::endl;
+    std::cout << this->id * (-1) << " " << (int) this->n << " " << res << " " << duration.count() << std::endl;
 }
