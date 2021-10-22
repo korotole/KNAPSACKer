@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/korale/Desktop/KOP/src/BranchAndBound.cpp
+BranchAndBound.h
+/home/korale/Desktop/KOP/src/BranchAndBound.h
+
+/home/korale/Desktop/KOP/src/BranchAndBound.h
+Common.h
+/home/korale/Desktop/KOP/src/Common.h
+
+/home/korale/Desktop/KOP/src/Common.h
+stdint.h
+-
+inttypes.h
+-
+errno.h
+-
+chrono
+-
+iostream
+-
+stdio.h
+-
+string.h
+-
+bits/stdc++.h
+-
+

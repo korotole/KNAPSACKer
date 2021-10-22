@@ -1,0 +1,1 @@
+awk 'FNR==NR {a[$1]++;next} ($2 in a) {print $2}' file file

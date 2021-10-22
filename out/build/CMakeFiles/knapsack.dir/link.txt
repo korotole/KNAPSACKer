@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/knapsack.dir/src/main.cpp.o  -o knapsack   -L/home/korale/Desktop/KOP/src  -Wl,-rpath,/home/korale/Desktop/KOP/src src/libsrc.a 

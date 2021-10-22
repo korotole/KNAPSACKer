@@ -1,0 +1,6 @@
+/home/korale/Desktop/KOP/out/build/CMakeFiles/edit_cache.dir
+/home/korale/Desktop/KOP/out/build/CMakeFiles/rebuild_cache.dir
+/home/korale/Desktop/KOP/out/build/CMakeFiles/knapsack.dir
+/home/korale/Desktop/KOP/out/build/src/CMakeFiles/rebuild_cache.dir
+/home/korale/Desktop/KOP/out/build/src/CMakeFiles/edit_cache.dir
+/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir
