@@ -1,6 +1,6 @@
 ## KNAPSACKer
 
-**KNAPSACKer** is a universal toolset for solving different types of knapsack problems mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University.
+**KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University.
 
 ### Brief overview
 
