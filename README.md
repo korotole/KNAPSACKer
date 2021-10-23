@@ -31,7 +31,7 @@ NOTE: since the projet is being developed under the linux platform, some buildin
 
 ### Run KNAPSACKer from the command line
 
-In order to run the project, `run.sh -e/-c/-d 0/1/2` or `v-run.sh -e/-c/-d 0/1/2` (valgrind-run, to trace memory behavoiur) script must be executed from the root directory of a project.
+In order to run the project, `run.sh -e/-c/-d 0/1/2 (-err)` or `v-run.sh -e/-c/-d 0/1/2` (valgrind-run, to trace memory behavoiur) script must be executed from the root directory of a project.
 
 ### Runtime description
 

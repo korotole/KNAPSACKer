@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+#TODO: modify accordingly to run.sh
+
 for file in ./data/*
 do
     echo "$file"
