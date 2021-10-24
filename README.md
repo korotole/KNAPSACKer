@@ -6,7 +6,7 @@
 
 **KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems (mainly mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University).
 
-**KNAPSACKer** is a command line tool that compounds *bash scripts* and *C++ executable*. The tool currently solves the following types of problems:
+**KNAPSACKer** is a command line tool that compounds *bash scripts* *python* and *C++ executable*. The tool currently solves the following types of problems:
 * Desicive (rozhodovací) - sum of all values in knapsack is less then B (4th number in the example datasets)
 * Constructive (konstruktivní) - sum of all values in knapsack is optimal
 * Exact (exaktní) - sum of all values in knapsack has to match predefined number
@@ -51,7 +51,7 @@ For each processed file there are two files that are being generated at the fold
 
 ### Results processing
 
-Currently the feature of plotting statistical information about results is being developed.
+TO BE UPDATED
 
 
 
