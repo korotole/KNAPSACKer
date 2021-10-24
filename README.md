@@ -1,5 +1,7 @@
 ## KNAPSACKer
 
+Stop talking to me just like I don't even bleed, this cross is heavy when you're my **KNAPSACKer**
+
 **KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems (mainly mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University).
 
 ### Brief overview
