@@ -35,6 +35,8 @@ NOTE: since the projet is being developed under the linux platform, some buildin
 
 In order to run the project, `run.sh -e/-c/-d 0/1/2 (-err)` or `v-run.sh -e/-c/-d 0/1/2` (valgrind-run, to trace memory behavoiur) script must be executed from the root directory of a project.
 
+**Example:** `bash ./run.sh -d 1 NR -err`
+
 ### Runtime description
 
 The executable scrit runs a program, passing each line of an each file in the `/data/` directory as one of command line arguments (program is being executed `N` times, where `N = lines(file1) + lines(file2) + ... lines(lastFile)`). **NOTE:** `/data/` folder includes some input data examples. 
