@@ -1,6 +1,6 @@
 ## KNAPSACKer
 
-Stop talking to me just like I don't even bleed, this cross is heavy when you're my **KNAPSACKer**
+"Stop talking to me just like I don't even bleed, this cross is heavy when you're my **KNAPSACKer**"
 
 ### Brief overview
 
