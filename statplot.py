@@ -66,7 +66,7 @@ plt.legend(fontsize=24)
 
 # times = d1ZRmins + d1ZRaves + d1ZRmaxs + d0ZRmins + d0ZRaves + d0ZRmaxs + d1NRmins + d1NRaves + d1NRmaxs + d0NRmins + d0NRaves + d0NRmaxs
 
-plt.title("ZR - BRUTE FORCE", fontsize=28)
+plt.title("COMBINED", fontsize=28)
 
 plt.xticks(sizes, sizes, fontsize=20)
 plt.yticks(fontsize=20)

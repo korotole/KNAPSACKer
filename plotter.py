@@ -23,6 +23,8 @@ fig, ax = plt.subplots(1, figsize=(16,6))
 # density=  raw_count/(totalCount * bin width) {% of being inside the bin comparely to all possible values}
 n, bins, pathces = plt.hist(time, bins=100)
 
+# plot an average value of a set
+plt.axvline(int(sys.argv[4]), color="red", linestyle='dashed', linewidth=1)
 
 # define minor ticks and draw a grid with them
 minor_locator = AutoMinorLocator(2)
