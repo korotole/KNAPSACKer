@@ -2,7 +2,7 @@
 
 gdate="$(date +"%d-%m@%H:%M:%S:%N")"
 
-for file in ./data/*
+for file in ./data/${3}/*
 do
     echo "$file:"
     tmp=$(echo "$(basename $file)" | grep -Po -m 1 "(([a-z]|[A-Z])*\d+)")
@@ -25,8 +25,8 @@ do
     python3 plotter.py ./out/output/${tmp}/${filename}.out ${min} ${max} ${ave}
 
     # saving computational errors in the .err file, if the third command line argument equals to "-err"
-    err=$(awk 'NR==FNR{a[$1]=$3;next}$3!=a[$1]&&a[$1]{print "ID: "$1"   ANSWER: "$3 "   GOT: "a[$1]}' ./out/output/${tmp}/${filename}.out ./solutions/${solfilename})
-    if [[ ${err} ]] && [[ "${3}" == "-err" ]]; then
+    if [[ "${3}" == "-err" ]]; then
+        err=$(awk 'NR==FNR{a[$1]=$3;next}$3!=a[$1]&&a[$1]{print "ID: "$1"   ANSWER: "$3 "   GOT: "a[$1]}' ./out/output/${tmp}/${filename}.out ./solutions/${solfilename})
         echo "${err}" >> ./out/output/${tmp}/${filename}.err
         # printing error ratio
         err=$(wc -l < ./out/output/${tmp}/${filename}.err)
