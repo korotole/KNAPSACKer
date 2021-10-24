@@ -1,8 +1,10 @@
 ## KNAPSACKer
 
-**KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems (mainly mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University).
+"Stop talking to me just like I don't even bleed, this cross is heavy when you're my **KNAPSACKer**"
 
 ### Brief overview
+
+**KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems (mainly mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University).
 
 **KNAPSACKer** is a command line tool that compounds *bash scripts* and *C++ executable*. The tool currently solves the following types of problems:
 * Desicive (rozhodovací) - sum of all values in knapsack is less then B (4th number in the example datasets)
@@ -32,6 +34,8 @@ NOTE: since the projet is being developed under the linux platform, some buildin
 ### Run KNAPSACKer from the command line
 
 In order to run the project, `run.sh -e/-c/-d 0/1/2 (-err)` or `v-run.sh -e/-c/-d 0/1/2` (valgrind-run, to trace memory behavoiur) script must be executed from the root directory of a project.
+
+**Example:** `bash ./run.sh -d 1 NR -err`
 
 ### Runtime description
 
