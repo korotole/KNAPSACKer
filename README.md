@@ -2,9 +2,9 @@
 
 Stop talking to me just like I don't even bleed, this cross is heavy when you're my **KNAPSACKer**
 
-**KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems (mainly mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University).
-
 ### Brief overview
+
+**KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems (mainly mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University).
 
 **KNAPSACKer** is a command line tool that compounds *bash scripts* and *C++ executable*. The tool currently solves the following types of problems:
 * Desicive (rozhodovací) - sum of all values in knapsack is less then B (4th number in the example datasets)
