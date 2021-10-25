@@ -7,14 +7,14 @@
 **KNAPSACKer** is a universal toolset for solving different types of knapsack (0/1) problems (mainly mentioned in the MI-KOP course at the Faculty of Information Technologies, Czech Technical University).
 
 **KNAPSACKer** is a command line tool that compounds *bash scripts* *python* and *C++ executable*. The tool currently solves the following types of problems:
-* Desicive (rozhodovací) - sum of all values in knapsack is less then B (4th number in the example datasets)
-* Constructive (konstruktivní) - sum of all values in knapsack is optimal
-* Exact (exaktní) - sum of all values in knapsack has to match predefined number
+* Desicive (rozhodovací) - sum of all values in knapsack is less then B (4th number in the example datasets);  `-d`
+* Constructive (konstruktivní) - sum of all values in knapsack is optimal;  `-c`
+* Exact (exaktní) - sum of all values in knapsack has to match predefined number;  `-e`
 
 Each problem can be solved using the following set of methods (algorithms):
-* Brute Force
-* Branch and Bound
-* Dynamic Programming
+* Brute Force;  `0`
+* Branch and Bound  `1`
+* Dynamic Programming  `2`
 
 ### Prepositions to build
 
@@ -51,7 +51,14 @@ For each processed file there are two files that are being generated at the fold
 
 ### Results processing
 
-TO BE UPDATED
+
+After a `.out` file was generated, `plotter.py` plots the distribution of computational times per file, storing the output in the `FILENAME.out.png` format.
+
+![computational times distribution](https://github.com/csraea/KNAPSACKer/blob/main/out/output/ZR30/ZR30_0-d_24-10%4001:55:21:167431827.out.png?raw=true)
+
+Also, the statistics of all runs is being stored and the `./out/output/` directory which can be furtherly proceeded by the `statplot.py` manually.
+
+![time dependence on the number of items](https://github.com/csraea/KNAPSACKer/blob/main/out/output/all.png?raw=true)
 
 
 
