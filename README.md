@@ -12,7 +12,7 @@
 * Exact (exaktní) - sum of all values in knapsack has to match predefined number;  `-e`
 
 Each problem can be solved using the following set of methods (algorithms):
-* Brute Force;  `0`
+* Brute Force  `0`
 * Branch and Bound  `1`
 * Dynamic Programming  `2`
 
