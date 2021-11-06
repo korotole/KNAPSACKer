@@ -34,9 +34,9 @@ class Knapsack {
     Item *items = nullptr;
 
     // auxiliary variables
-    std::vector<int> appr_cost = { };     // approximated cost of all items
-    std::vector<bool> solution = { };    // solution for current items
-    std::vector<float> heuristic = { };  // computed heuristic value (cost/weight)
+    std::vector<int> appr_cost;     // approximated cost of all items
+    std::vector<bool> solution;    // solution for current items
+    std::vector<float> heuristic;  // computed heuristic value (cost/weight)
 
     /**
      * Constructor. 
@@ -58,43 +58,9 @@ class Knapsack {
     };
 
     /**
-     * Getter of max items which can be selected for knapsack.
-     *
-     * @return  number of items
-     */
-    int GetMaxItems();
-
-    /**
-     * Getter of knapsack volume.
-     *
-     * @return  volume
-     */
-    int GetVolume();
-
-    /**
-     * Getter of knapsack capacity.
-     *
-     * @return  capacity
-     */
-    int GetCapacity();
-
-    /**
-     * Prints solutions of all instances.
-     */
-    void PrintSolutions();
-
-    /**
      * Compute heuristic for all instance values and sort them in decreasing order.
      */
     void ComputeHeuristic();
-
-    /**
-     * Sorts vector of float values.
-     *
-     * @param  values  vector of float values
-     * @return         vector of indexes according to sorted values
-     */
-    std::vector<float> OrderVector(std::vector<float> const& values);
 
     void PrintKnapsack(); 
 

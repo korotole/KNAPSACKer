@@ -13,6 +13,12 @@ do
     while IFS= read -r line; do
         
         ./out/knapsack ${1} ${2} "$line" >> ./out/output/${tmp}/${filename}.out   #tasktype(d/e/c) method(0/1/2) knapsack
+
+        res="$?"
+        if [[ ${res} != "0" ]]; then 
+            echo "ERROR: program returned ${res}"
+            exit
+        fi
         
     done < "$file"
 
@@ -20,9 +26,10 @@ do
     min=`awk 'BEGIN{a=999999999999}{if ($4<0+a) a=$4} END{print a}' ./out/output/${tmp}/${filename}.out`
     max=`awk 'BEGIN{a=           0}{if ($4>0+a) a=$4} END{print a}' ./out/output/${tmp}/${filename}.out`
     ave=`awk '{ sum += $4 } END { if (NR > 0) { OFMT="%d";print sum / NR }}' ./out/output/${tmp}/${filename}.out`
+    sum=`awk '{ sum += $4 } END { if (NR > 0) { OFMT="%d";print sum}}' ./out/output/${tmp}/${filename}.out`
 
     # plotting a distribution of an every file
-    python3 plotter.py ./out/output/${tmp}/${filename}.out ${min} ${max} ${ave}
+    python3 plotter.py ./out/output/${tmp}/${filename}.out ${min} ${max} ${ave} ${sum}
 
     # saving computational errors in the .err file, if the third command line argument equals to "-err"
     if [[ "${4}" == "-err" ]]; then

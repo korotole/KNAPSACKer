@@ -233,6 +233,33 @@ ExecutionController.cpp.s:
 	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ExecutionController.cpp.s
 .PHONY : ExecutionController.cpp.s
 
+GreedyHeruistic.o: GreedyHeruistic.cpp.o
+
+.PHONY : GreedyHeruistic.o
+
+# target to build an object file
+GreedyHeruistic.cpp.o:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/GreedyHeruistic.cpp.o
+.PHONY : GreedyHeruistic.cpp.o
+
+GreedyHeruistic.i: GreedyHeruistic.cpp.i
+
+.PHONY : GreedyHeruistic.i
+
+# target to preprocess a source file
+GreedyHeruistic.cpp.i:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/GreedyHeruistic.cpp.i
+.PHONY : GreedyHeruistic.cpp.i
+
+GreedyHeruistic.s: GreedyHeruistic.cpp.s
+
+.PHONY : GreedyHeruistic.s
+
+# target to generate assembly for a file
+GreedyHeruistic.cpp.s:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/GreedyHeruistic.cpp.s
+.PHONY : GreedyHeruistic.cpp.s
+
 Knapsack.o: Knapsack.cpp.o
 
 .PHONY : Knapsack.o
@@ -308,6 +335,9 @@ help:
 	@echo "... ExecutionController.o"
 	@echo "... ExecutionController.i"
 	@echo "... ExecutionController.s"
+	@echo "... GreedyHeruistic.o"
+	@echo "... GreedyHeruistic.i"
+	@echo "... GreedyHeruistic.s"
 	@echo "... Knapsack.o"
 	@echo "... Knapsack.i"
 	@echo "... Knapsack.s"

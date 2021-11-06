@@ -4,6 +4,10 @@
 
 BOLD=`tput bold`
 
+if [[ ${1} == "-r" ]]; then
+    rm -rf ./out/
+fi
+
 cmake -S . -B ./out/build/
 CMAKE=$?
 

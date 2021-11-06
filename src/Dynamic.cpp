@@ -21,9 +21,9 @@ uint32_t Dynamic::SolveRDynamic(Knapsack *knapsack, TaskType type) {
     for (int i = 0; i <= knapsack->n; i++) {
         for (int w = 0; w <= knapsack->M; w++) {
 
-            if (i == 0 || w == 0)               K[i][w] = 0;
+            if (i == 0 || w == 0)                         K[i][w] = 0;
             else if (knapsack->items[i - 1].weight <= w)  K[i][w] = std::max(knapsack->items[i - 1].value + K[i - 1][w - knapsack->items[i - 1].weight], K[i - 1][w]);
-            else                                K[i][w] = K[i - 1][w];
+            else                                          K[i][w] = K[i - 1][w];
         }
     }
  
@@ -93,13 +93,13 @@ Cell * Dynamic::ExistCell(std::vector<Cell *> * column, int weight) {
  * @return           network used for solving knapsack problem by dynamic programming
  */
 std::vector<std::vector<Cell *>> Dynamic::CreateNetwork(Knapsack *knapsack, int32_t capacity) {
-    std::vector<Cell*> column = { };
+    std::vector<Cell*> column;
     int32_t tmp_weight = 0;
-    std::vector<std::vector<Cell *>> table = { };
+    std::vector<std::vector<Cell *>> table;
 
-    Cell * tmp_cell = NULL;
+    Cell *tmp_cell = NULL;
 
-    Cell * init_cell = CreateCell(capacity);
+    Cell *init_cell = CreateCell(capacity);
     std::vector<Cell *> init_col = {init_cell};
     table.insert(table.begin(), init_col); 
 
@@ -146,8 +146,8 @@ std::vector<std::vector<Cell *>> Dynamic::CreateNetwork(Knapsack *knapsack, int3
  * @param  table  necessary network used for dynamic programming
  */
 void Dynamic::SolveNetwork(Knapsack *knapsack, std::vector<std::vector<Cell *>> *table, TaskType type) {
-    Cell * first_cell = nullptr;
-    Cell * second_cell = nullptr;
+    Cell *first_cell = nullptr;
+    Cell *second_cell = nullptr;
     int tmp_cost_first = 0;
     int tmp_cost_second = 0;
     int tmp_cost_item = 0;
@@ -209,7 +209,7 @@ void Dynamic::SolveNetwork(Knapsack *knapsack, std::vector<std::vector<Cell *>> 
  * @return        final combination of items in knapsack
  */
 std::vector<bool> Dynamic::FindPath(Cell * cell) {
-    std::vector<bool> path = { };
+    std::vector<bool> path = { }; // TODO: = path(size, 0), refactor cycle below, might fix the bug with missing zeroes at output
     Cell * tmp_cell = cell;
 
     while (tmp_cell != NULL) {

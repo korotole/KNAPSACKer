@@ -11,6 +11,7 @@
 #include "BranchBound.h"
 #include "BruteForce.h"
 #include "Dynamic.h"
+#include "GreedyHeruistic.h"
 #include "Knapsack.h"
 
 class ExecutionController {

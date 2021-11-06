@@ -51,7 +51,7 @@ for idx, value in enumerate(n):
     if value > 0:
         plt.text(xticks[idx], value + 1, int(value), ha='center', fontsize=8, fontweight="bold")
 
-plt.xlabel("min: " + sys.argv[2] + "    max: " + sys.argv[3] + "    ave: " + sys.argv[4] + "\nmiliseconds", fontsize=12)
+plt.xlabel("min: " + sys.argv[2] + "    max: " + sys.argv[3] + "    ave: " + sys.argv[4] + "    total: " + sys.argv[5] + "\nmiliseconds", fontsize=12)
 plt.ylabel("count", fontsize=12)
 plt.title(sys.argv[1] + "\n", fontsize=18)
 

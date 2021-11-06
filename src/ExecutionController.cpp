@@ -67,6 +67,7 @@ auto ExecutionController::GetSolvingFunction(uint8_t method){
         case 0:     return &BruteForce::SolveKnapsack;
         case 1:     return &BranchBound::SolveKnapsack;
         case 2:     return &Dynamic::SolveKnapsack;
+        case 3:     return &GreedyHeruistic::SolveKnapsack;
         default:    break;
     }
 
@@ -95,13 +96,18 @@ void ExecutionController::PrintResults(std::chrono::microseconds duration, uint3
     if (this->type == TaskType::Constructive || this->type == TaskType::DesiciveConstructive || this->type == TaskType::ExactConstructive){
         std::cout << " ";
         if(!this->knapsack->solution.empty()) {
+            // solve strange printing bug 
+            auto lim =  (int)knapsack->n - this->knapsack->solution.size() + 1;
+            for(uint8_t i = 0; i < lim; i++) {
+                std::cout << "0";
+            }
             
-            for (uint8_t i = 0; i < knapsack->solution.size() - 1; i++) {
-                std::cout << (knapsack->solution.at(i));
+            for (auto it = this->knapsack->solution.begin(); it != knapsack->solution.end() -1; it++) {
+                std::cout << "" << *(it);
             }
 
         } else {
-
+            
             for (uint8_t i = 0; i < knapsack->n; i++) {
                 std::cout << "0";
             }

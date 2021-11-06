@@ -24,21 +24,6 @@ void Knapsack::ComputeHeuristic() {
 }
 
 /**
- * Sorts vector of float values.
- */
-std::vector<float> Knapsack::OrderVector(std::vector<float> const& values) {
-    std::vector<float> indices(values.size());
-    std::iota(begin(indices), end(indices), static_cast<float>(0));
-
-    std::sort(
-            begin(indices), end(indices),
-            [&](float a, float b) { return values[a] < values[b]; }
-            );
-
-    return indices;
-}
-
-/**
  * Prints information about given Instance * inst.
  */
 void Knapsack::PrintKnapsack() {

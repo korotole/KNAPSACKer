@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+/home/korale/Desktop/KOP/src/BranchBound.cpp
+BranchBound.h
+/home/korale/Desktop/KOP/src/BranchBound.h
+
 /home/korale/Desktop/KOP/src/BranchBound.h
 Knapsack.h
 /home/korale/Desktop/KOP/src/Knapsack.h
 queue
 -
+
+/home/korale/Desktop/KOP/src/BruteForce.cpp
+BruteForce.h
+/home/korale/Desktop/KOP/src/BruteForce.h
 
 /home/korale/Desktop/KOP/src/BruteForce.h
 Knapsack.h
@@ -36,6 +44,10 @@ iterator
 bits/stdc++.h
 -
 
+/home/korale/Desktop/KOP/src/Dynamic.cpp
+Dynamic.h
+/home/korale/Desktop/KOP/src/Dynamic.h
+
 /home/korale/Desktop/KOP/src/Dynamic.h
 Knapsack.h
 /home/korale/Desktop/KOP/src/Knapsack.h
@@ -53,6 +65,20 @@ BruteForce.h
 /home/korale/Desktop/KOP/src/BruteForce.h
 Dynamic.h
 /home/korale/Desktop/KOP/src/Dynamic.h
+GreedyHeruistic.h
+/home/korale/Desktop/KOP/src/GreedyHeruistic.h
+Knapsack.h
+/home/korale/Desktop/KOP/src/Knapsack.h
+
+/home/korale/Desktop/KOP/src/GreedyHeruistic.cpp
+GreedyHeruistic.h
+/home/korale/Desktop/KOP/src/GreedyHeruistic.h
+
+/home/korale/Desktop/KOP/src/GreedyHeruistic.h
+Knapsack.h
+/home/korale/Desktop/KOP/src/Knapsack.h
+
+/home/korale/Desktop/KOP/src/Knapsack.cpp
 Knapsack.h
 /home/korale/Desktop/KOP/src/Knapsack.h
 
@@ -77,4 +103,8 @@ stdlib.h
 -
 Common.h
 /home/korale/Desktop/KOP/src/Common.h
+
+/home/korale/Desktop/KOP/src/main.cpp
+ExecutionController.h
+/home/korale/Desktop/KOP/src/ExecutionController.h
 

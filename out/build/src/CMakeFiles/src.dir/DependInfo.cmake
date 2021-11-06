@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/korale/Desktop/KOP/src/BruteForce.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/BruteForce.cpp.o"
   "/home/korale/Desktop/KOP/src/Dynamic.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/Dynamic.cpp.o"
   "/home/korale/Desktop/KOP/src/ExecutionController.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/ExecutionController.cpp.o"
+  "/home/korale/Desktop/KOP/src/GreedyHeruistic.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/GreedyHeruistic.cpp.o"
   "/home/korale/Desktop/KOP/src/Knapsack.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/Knapsack.cpp.o"
   "/home/korale/Desktop/KOP/src/main.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/main.cpp.o"
   )

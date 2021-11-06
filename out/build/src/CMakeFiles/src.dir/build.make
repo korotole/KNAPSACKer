@@ -109,9 +109,22 @@ src/CMakeFiles/src.dir/ExecutionController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/ExecutionController.cpp.s"
 	cd /home/korale/Desktop/KOP/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/korale/Desktop/KOP/src/ExecutionController.cpp -o CMakeFiles/src.dir/ExecutionController.cpp.s
 
+src/CMakeFiles/src.dir/GreedyHeruistic.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/GreedyHeruistic.cpp.o: ../../src/GreedyHeruistic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/KOP/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/src.dir/GreedyHeruistic.cpp.o"
+	cd /home/korale/Desktop/KOP/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/GreedyHeruistic.cpp.o -c /home/korale/Desktop/KOP/src/GreedyHeruistic.cpp
+
+src/CMakeFiles/src.dir/GreedyHeruistic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/GreedyHeruistic.cpp.i"
+	cd /home/korale/Desktop/KOP/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/korale/Desktop/KOP/src/GreedyHeruistic.cpp > CMakeFiles/src.dir/GreedyHeruistic.cpp.i
+
+src/CMakeFiles/src.dir/GreedyHeruistic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/GreedyHeruistic.cpp.s"
+	cd /home/korale/Desktop/KOP/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/korale/Desktop/KOP/src/GreedyHeruistic.cpp -o CMakeFiles/src.dir/GreedyHeruistic.cpp.s
+
 src/CMakeFiles/src.dir/Knapsack.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/Knapsack.cpp.o: ../../src/Knapsack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/KOP/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/src.dir/Knapsack.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/KOP/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/src.dir/Knapsack.cpp.o"
 	cd /home/korale/Desktop/KOP/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/Knapsack.cpp.o -c /home/korale/Desktop/KOP/src/Knapsack.cpp
 
 src/CMakeFiles/src.dir/Knapsack.cpp.i: cmake_force
@@ -124,7 +137,7 @@ src/CMakeFiles/src.dir/Knapsack.cpp.s: cmake_force
 
 src/CMakeFiles/src.dir/main.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/KOP/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/KOP/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
 	cd /home/korale/Desktop/KOP/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/main.cpp.o -c /home/korale/Desktop/KOP/src/main.cpp
 
 src/CMakeFiles/src.dir/main.cpp.i: cmake_force
@@ -141,6 +154,7 @@ src_OBJECTS = \
 "CMakeFiles/src.dir/BruteForce.cpp.o" \
 "CMakeFiles/src.dir/Dynamic.cpp.o" \
 "CMakeFiles/src.dir/ExecutionController.cpp.o" \
+"CMakeFiles/src.dir/GreedyHeruistic.cpp.o" \
 "CMakeFiles/src.dir/Knapsack.cpp.o" \
 "CMakeFiles/src.dir/main.cpp.o"
 
@@ -151,11 +165,12 @@ src/libsrc.a: src/CMakeFiles/src.dir/BranchBound.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/BruteForce.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/Dynamic.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/ExecutionController.cpp.o
+src/libsrc.a: src/CMakeFiles/src.dir/GreedyHeruistic.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/Knapsack.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/main.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/build.make
 src/libsrc.a: src/CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/korale/Desktop/KOP/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libsrc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/korale/Desktop/KOP/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libsrc.a"
 	cd /home/korale/Desktop/KOP/out/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
 	cd /home/korale/Desktop/KOP/out/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 
