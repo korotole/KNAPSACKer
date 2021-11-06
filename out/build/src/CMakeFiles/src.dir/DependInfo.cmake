@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/korale/Desktop/KOP/src/BranchAndBound.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/BranchAndBound.cpp.o"
+  "/home/korale/Desktop/KOP/src/BranchBound.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/BranchBound.cpp.o"
   "/home/korale/Desktop/KOP/src/BruteForce.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/BruteForce.cpp.o"
   "/home/korale/Desktop/KOP/src/Dynamic.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/Dynamic.cpp.o"
   "/home/korale/Desktop/KOP/src/ExecutionController.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/ExecutionController.cpp.o"
+  "/home/korale/Desktop/KOP/src/Knapsack.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/Knapsack.cpp.o"
   "/home/korale/Desktop/KOP/src/main.cpp" "/home/korale/Desktop/KOP/out/build/src/CMakeFiles/src.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

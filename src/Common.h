@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @author Oleksandr Korotetskyi <csraea@gmail.com>
+ * @date 06/11/2021
+ */
+
 #ifndef COMMON_H
 #define COMMON_H
 
@@ -8,6 +14,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+#include <iterator>
 #include <bits/stdc++.h>
 
 struct Item {
@@ -18,9 +25,12 @@ struct Item {
 typedef struct Item Item;
 
 enum class TaskType{
-    exact,
-    constructive,
-    desicive
+    Exact,
+    Constructive,
+    Desicive,
+
+    ExactConstructive,
+    DesiciveConstructive
 };
 
 #endif

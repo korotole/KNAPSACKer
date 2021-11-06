@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# rm -rf ./out/build/
+
 BOLD=`tput bold`
 
 cmake -S . -B ./out/build/

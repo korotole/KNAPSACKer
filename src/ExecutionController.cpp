@@ -1,7 +1,25 @@
+/**
+ * @file
+ * @author Oleksandr Korotetskyi <csraea@gmail.com>
+ * @date 06/11/2021
+ *
+ * @section DESCRIPTION
+ *
+ * KNAPSACK PROBLEM 
+ *
+ * Program execution controller.
+ */
+
+
 #include "ExecutionController.h"
 
 void ExecutionController::GetKnapsackData(const char *line){
     
+    int16_t id = 0; 
+    int32_t B = 0;  // požadovana minimální cena
+    uint8_t n = 0;  // počet věcí
+    int32_t M = 0;  // kapacita batohu
+
     FILE *stream = fmemopen ((void*)line, strlen(line), "r");
     if(stream == NULL) {
         perror("fmemopen:\t");
@@ -10,12 +28,18 @@ void ExecutionController::GetKnapsackData(const char *line){
         exit(EXIT_FAILURE);
     }
 
-    fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNd32 "%" SCNd32, &(this->id), &(this->n), &(this->M), &(this->B));
 
-    this->items = new Item[this->n] ();    // allocate array of items of desired size
+    if ( this->type == TaskType::DesiciveConstructive || this->type == TaskType::Desicive || this->type == TaskType::Exact || this->type == TaskType::ExactConstructive )
+        fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNd32 "%" SCNd32, &id, &n, &M, &B);
+
+    else    //TODO modify according to new file format
+        fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNd32 "%" SCNd32, &id, &n, &M, &B);
+
+
+    this->knapsack = new Knapsack(id, B, n, M);
 
     for(uint8_t i = 0; i < n; i++){
-        fscanf(stream, "%" SCNu16 "%" SCNu16, &(this->items[i].weight), &(this->items[i].value));
+        fscanf(stream, "%" SCNu16 "%" SCNu16, &(this->knapsack->items[i].weight), &(this->knapsack->items[i].value));
     }
 
     fclose(stream);
@@ -23,9 +47,13 @@ void ExecutionController::GetKnapsackData(const char *line){
 
 
 void ExecutionController::GetTaskType(const char *type) {
-    if(strcmp(type, "-e") == 0) this->type = TaskType::exact;
-    else if(strcmp(type, "-d") == 0) this->type = TaskType::desicive;
-    else if(strcmp(type, "-c") == 0) this->type = TaskType::constructive;
+    if(strcmp(type, "-e") == 0) this->type = TaskType::Exact;
+    else if(strcmp(type, "-d") == 0) this->type = TaskType::Desicive;
+    else if(strcmp(type, "-c") == 0) this->type = TaskType::Constructive;
+    else if(strcmp(type, "-dc") == 0) this->type = TaskType::DesiciveConstructive;
+    else if(strcmp(type, "-ec") == 0) this->type = TaskType::ExactConstructive;
+    else if(strcmp(type, "-cd") == 0) this->type = TaskType::DesiciveConstructive;
+    else if(strcmp(type, "-ce") == 0) this->type = TaskType::ExactConstructive;
     else {
         std::cout << "Error: invalid task type:\t" << type << std::endl;
 
@@ -36,24 +64,51 @@ void ExecutionController::GetTaskType(const char *type) {
 auto ExecutionController::GetSolvingFunction(uint8_t method){
 
     switch (method) {
-        case 0:     return &BruteForce::Knapsack;
-        case 1:     return &BranchAndBound::Knapsack;
-        case 2:     return &Dynamic::Knapsack;
+        case 0:     return &BruteForce::SolveKnapsack;
+        case 1:     return &BranchBound::SolveKnapsack;
+        case 2:     return &Dynamic::SolveKnapsack;
         default:    break;
     }
 
     std::cout << "Default BruteForce method is chosen.\n";
-    return &BruteForce::Knapsack;
+    return &BruteForce::SolveKnapsack;
 }
 
 void ExecutionController::SolveKnapsackProblem(uint8_t method) {
     
-    auto func = ExecutionController::GetSolvingFunction(method);
+    auto func = GetSolvingFunction(method);
 
     auto start = std::chrono::high_resolution_clock::now();
-    auto res = func(this->n, this->M, this->items, this->type, this->B);
+    auto res = func(this->knapsack, this->type);
     auto stop = std::chrono::high_resolution_clock::now();
 
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    std::cout << this->id * (-1) << " " << (int) this->n << " " << res << " " << duration.count() << std::endl;
+
+    PrintResults(duration, res);
+}
+
+void ExecutionController::PrintResults(std::chrono::microseconds duration, uint32_t res) {
+    // printing results below
+
+    std::cout << static_cast<int>(this->knapsack->id) * (-1) << " " <<  static_cast<int>(this->knapsack->n) << " " << static_cast<int>(res) << " " << duration.count();
+
+    if (this->type == TaskType::Constructive || this->type == TaskType::DesiciveConstructive || this->type == TaskType::ExactConstructive){
+        std::cout << " ";
+        if(!this->knapsack->solution.empty()) {
+            
+            for (uint8_t i = 0; i < knapsack->solution.size() - 1; i++) {
+                std::cout << (knapsack->solution.at(i));
+            }
+
+        } else {
+
+            for (uint8_t i = 0; i < knapsack->n; i++) {
+                std::cout << "0";
+            }
+
+        }
+        
+    }
+
+    std::cout << std::endl;
 }

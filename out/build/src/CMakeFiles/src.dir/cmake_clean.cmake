@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/src.dir/BranchAndBound.cpp.o"
+  "CMakeFiles/src.dir/BranchBound.cpp.o"
   "CMakeFiles/src.dir/BruteForce.cpp.o"
   "CMakeFiles/src.dir/Dynamic.cpp.o"
   "CMakeFiles/src.dir/ExecutionController.cpp.o"
+  "CMakeFiles/src.dir/Knapsack.cpp.o"
   "CMakeFiles/src.dir/main.cpp.o"
   "libsrc.a"
   "libsrc.pdb"

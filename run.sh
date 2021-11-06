@@ -26,7 +26,7 @@ do
 
     # saving computational errors in the .err file, if the third command line argument equals to "-err"
     if [[ "${4}" == "-err" ]]; then
-        err=$(awk 'NR==FNR{a[$1]=$3;next}$3!=a[$1]&&a[$1]{print "ID: "$1"   ANSWER: "$3 "   GOT: "a[$1]}' ./out/output/${tmp}/${filename}.out ./solutions/${solfilename})
+        err=$(awk 'NR==FNR{a[$1]=$3;next}$3!=a[$1]&&a[$1]{print "ID: "$1"   ANSWER: "$3 "   GOT: "a[$1]}' ./out/output/${tmp}/${filename}.out ./data/solutions/${solfilename})
         echo "${err}" >> ./out/output/${tmp}/${filename}.err
         # printing error ratio
         err=$(wc -l < ./out/output/${tmp}/${filename}.err)

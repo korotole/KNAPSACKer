@@ -125,32 +125,32 @@ src/fast:
 	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
 .PHONY : src/fast
 
-BranchAndBound.o: BranchAndBound.cpp.o
+BranchBound.o: BranchBound.cpp.o
 
-.PHONY : BranchAndBound.o
+.PHONY : BranchBound.o
 
 # target to build an object file
-BranchAndBound.cpp.o:
-	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BranchAndBound.cpp.o
-.PHONY : BranchAndBound.cpp.o
+BranchBound.cpp.o:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BranchBound.cpp.o
+.PHONY : BranchBound.cpp.o
 
-BranchAndBound.i: BranchAndBound.cpp.i
+BranchBound.i: BranchBound.cpp.i
 
-.PHONY : BranchAndBound.i
+.PHONY : BranchBound.i
 
 # target to preprocess a source file
-BranchAndBound.cpp.i:
-	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BranchAndBound.cpp.i
-.PHONY : BranchAndBound.cpp.i
+BranchBound.cpp.i:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BranchBound.cpp.i
+.PHONY : BranchBound.cpp.i
 
-BranchAndBound.s: BranchAndBound.cpp.s
+BranchBound.s: BranchBound.cpp.s
 
-.PHONY : BranchAndBound.s
+.PHONY : BranchBound.s
 
 # target to generate assembly for a file
-BranchAndBound.cpp.s:
-	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BranchAndBound.cpp.s
-.PHONY : BranchAndBound.cpp.s
+BranchBound.cpp.s:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BranchBound.cpp.s
+.PHONY : BranchBound.cpp.s
 
 BruteForce.o: BruteForce.cpp.o
 
@@ -233,6 +233,33 @@ ExecutionController.cpp.s:
 	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ExecutionController.cpp.s
 .PHONY : ExecutionController.cpp.s
 
+Knapsack.o: Knapsack.cpp.o
+
+.PHONY : Knapsack.o
+
+# target to build an object file
+Knapsack.cpp.o:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Knapsack.cpp.o
+.PHONY : Knapsack.cpp.o
+
+Knapsack.i: Knapsack.cpp.i
+
+.PHONY : Knapsack.i
+
+# target to preprocess a source file
+Knapsack.cpp.i:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Knapsack.cpp.i
+.PHONY : Knapsack.cpp.i
+
+Knapsack.s: Knapsack.cpp.s
+
+.PHONY : Knapsack.s
+
+# target to generate assembly for a file
+Knapsack.cpp.s:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Knapsack.cpp.s
+.PHONY : Knapsack.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -269,9 +296,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... src"
-	@echo "... BranchAndBound.o"
-	@echo "... BranchAndBound.i"
-	@echo "... BranchAndBound.s"
+	@echo "... BranchBound.o"
+	@echo "... BranchBound.i"
+	@echo "... BranchBound.s"
 	@echo "... BruteForce.o"
 	@echo "... BruteForce.i"
 	@echo "... BruteForce.s"
@@ -281,6 +308,9 @@ help:
 	@echo "... ExecutionController.o"
 	@echo "... ExecutionController.i"
 	@echo "... ExecutionController.s"
+	@echo "... Knapsack.o"
+	@echo "... Knapsack.i"
+	@echo "... Knapsack.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

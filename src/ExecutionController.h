@@ -1,38 +1,44 @@
+/**
+ * @file
+ * @author Oleksandr Korotetskyi <csraea@gmail.com>
+ * @date 06/11/2021
+ */
+
 #ifndef EXECUTIONCONTROLLER_H
 #define EXECUTIONCONTROLLER_H
 
 #include "Common.h"
-#include "BranchAndBound.h"
+#include "BranchBound.h"
 #include "BruteForce.h"
 #include "Dynamic.h"
+#include "Knapsack.h"
 
 class ExecutionController {
 
   private:
-    int16_t id = 0; 
-    int32_t B = 0;  // požadovana minimální cena
-    uint8_t n = 0;  // počet věcí
-    int32_t M = 0; // kapacita batohu
     
-    Item *items = 0;
-    TaskType type = TaskType::desicive;
+    TaskType type = TaskType::Desicive;
+    Knapsack *knapsack = nullptr;
 
   public:
+    // problem type, knapsack instance
     ExecutionController(const char *type, const char *line) {
-        GetKnapsackData(line);
         GetTaskType(type);
+        GetKnapsackData(line);
     };
 
     ~ExecutionController() {
-        delete[] items; 
+        delete knapsack; 
     };
 
+    // method of solving
     void SolveKnapsackProblem(uint8_t method);
 
   private:
     void GetKnapsackData(const char *line); 
     auto GetSolvingFunction(uint8_t method);
     void GetTaskType(const char *type);
+    void PrintResults(std::chrono::microseconds duration, uint32_t res);
 };
 
 #endif
