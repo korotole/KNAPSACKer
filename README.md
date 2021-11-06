@@ -15,6 +15,7 @@ Each problem can be solved using the following set of methods (algorithms):
 * Brute Force  `0`
 * Branch and Bound  `1`
 * Dynamic Programming  `2`
+* Greedy Heruistic `3`
 
 ### Prepositions to build
 
