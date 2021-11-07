@@ -20,6 +20,7 @@
 struct Item {
     uint16_t value;
     uint16_t weight;
+    Item *forward;
 };
 
 typedef struct Item Item;
@@ -28,9 +29,13 @@ enum class TaskType{
     Exact,
     Constructive,
     Desicive,
+    Redux,
 
     ExactConstructive,
-    DesiciveConstructive
+    DesiciveConstructive,
+    ReduxConstructive,
+
+    ReduxDesiciveConstructive
 };
 
 #endif

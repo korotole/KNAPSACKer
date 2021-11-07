@@ -24,17 +24,18 @@ class Knapsack {
 
   public:
 
-    int16_t id = 0; // ID of instance
-    int32_t B = 0;  // požadovana minimální cena
-    uint8_t n = 0;  // počet věcí
-    int32_t M = 0;  // kapacita batohu    
+    int16_t id; // ID of instance
+    int32_t B;  // požadovana minimální cena
+    uint8_t n;  // počet věcí
+    int32_t M;  // kapacita batohu    
 
     int32_t total = 0;  // sum of all item values
-    
     Item *items = nullptr;
 
+    int32_t precision = 0;
+
     // auxiliary variables
-    std::vector<int> appr_cost;     // approximated cost of all items
+    std::vector<int> appr_cost;     // approximated cost of all items, needed for FPTAS
     std::vector<bool> solution;    // solution for current items
     std::vector<float> heuristic;  // computed heuristic value (cost/weight)
 
@@ -42,8 +43,6 @@ class Knapsack {
      * Constructor. 
      *
      * Checks if given file name exist, parse lines of that file and creates instances.
-     *
-     * @param  file_name  name of file with instances
      */
     Knapsack(uint16_t id, int32_t B, uint8_t n, int32_t M) : id(id), B(B), n(n), M(M) { 
         this->items = new Item[static_cast<int>(this->n)] ();    // allocate array of items of desired size
@@ -61,7 +60,8 @@ class Knapsack {
      * Compute heuristic for all instance values and sort them in decreasing order.
      */
     void ComputeHeuristic();
-
+    void SetPrecision(int32_t p);
+    void SetPrecision(const char *p);
     void PrintKnapsack(); 
 
 };

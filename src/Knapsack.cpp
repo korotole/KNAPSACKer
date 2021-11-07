@@ -23,6 +23,14 @@ void Knapsack::ComputeHeuristic() {
     
 }
 
+void Knapsack::SetPrecision(int32_t p) {
+    this->precision = p;
+}
+
+void Knapsack::SetPrecision(const char *p) {
+    this->precision = atoi(p);
+}
+
 /**
  * Prints information about given Instance * inst.
  */

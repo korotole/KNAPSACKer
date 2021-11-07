@@ -67,8 +67,26 @@ Dynamic.h
 /home/korale/Desktop/KOP/src/Dynamic.h
 GreedyHeruistic.h
 /home/korale/Desktop/KOP/src/GreedyHeruistic.h
+FPTAS.h
+/home/korale/Desktop/KOP/src/FPTAS.h
 Knapsack.h
 /home/korale/Desktop/KOP/src/Knapsack.h
+
+/home/korale/Desktop/KOP/src/FPTAS.cpp
+FPTAS.h
+/home/korale/Desktop/KOP/src/FPTAS.h
+
+/home/korale/Desktop/KOP/src/FPTAS.h
+bitset
+-
+stdlib.h
+-
+Common.h
+/home/korale/Desktop/KOP/src/Common.h
+Knapsack.h
+/home/korale/Desktop/KOP/src/Knapsack.h
+Dynamic.h
+/home/korale/Desktop/KOP/src/Dynamic.h
 
 /home/korale/Desktop/KOP/src/GreedyHeruistic.cpp
 GreedyHeruistic.h

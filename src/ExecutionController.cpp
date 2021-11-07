@@ -33,7 +33,7 @@ void ExecutionController::GetKnapsackData(const char *line){
         fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNd32 "%" SCNd32, &id, &n, &M, &B);
 
     else    //TODO modify according to new file format
-        fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNd32 "%" SCNd32, &id, &n, &M, &B);
+        fscanf(stream, "%" SCNd16 "%" SCNu8 "%" SCNd32, &id, &n, &M);
 
 
     this->knapsack = new Knapsack(id, B, n, M);
@@ -61,13 +61,14 @@ void ExecutionController::GetTaskType(const char *type) {
     }
 }
 
-auto ExecutionController::GetSolvingFunction(uint8_t method){
+auto ExecutionController::GetSolvingFunction(int32_t method){
 
     switch (method) {
         case 0:     return &BruteForce::SolveKnapsack;
         case 1:     return &BranchBound::SolveKnapsack;
         case 2:     return &Dynamic::SolveKnapsack;
         case 3:     return &GreedyHeruistic::SolveKnapsack;
+        case 4:     return &FPTAS::SolveKnapsack;
         default:    break;
     }
 
@@ -75,9 +76,9 @@ auto ExecutionController::GetSolvingFunction(uint8_t method){
     return &BruteForce::SolveKnapsack;
 }
 
-void ExecutionController::SolveKnapsackProblem(uint8_t method) {
+void ExecutionController::SolveKnapsackProblem() {
     
-    auto func = GetSolvingFunction(method);
+    auto func = GetSolvingFunction(this->method);
 
     auto start = std::chrono::high_resolution_clock::now();
     auto res = func(this->knapsack, this->type);
@@ -117,4 +118,8 @@ void ExecutionController::PrintResults(std::chrono::microseconds duration, uint3
     }
 
     std::cout << std::endl;
+}
+
+void ExecutionController::GetMethod(const char *m) {
+    this->method = atoi(m);
 }

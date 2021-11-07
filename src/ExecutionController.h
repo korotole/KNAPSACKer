@@ -12,20 +12,24 @@
 #include "BruteForce.h"
 #include "Dynamic.h"
 #include "GreedyHeruistic.h"
+#include "FPTAS.h"
 #include "Knapsack.h"
 
 class ExecutionController {
 
   private:
     
-    TaskType type = TaskType::Desicive;
+    int32_t method;
+    TaskType type;
     Knapsack *knapsack = nullptr;
 
   public:
     // problem type, knapsack instance
-    ExecutionController(const char *type, const char *line) {
-        GetTaskType(type);
-        GetKnapsackData(line);
+    ExecutionController(int argc, char **argv) {
+        GetTaskType(argv[1]);
+        GetKnapsackData(argv[4]);
+        GetMethod(argv[2]);
+        knapsack->SetPrecision(argv[3]);
     };
 
     ~ExecutionController() {
@@ -33,12 +37,13 @@ class ExecutionController {
     };
 
     // method of solving
-    void SolveKnapsackProblem(uint8_t method);
+    void SolveKnapsackProblem();
 
   private:
     void GetKnapsackData(const char *line); 
-    auto GetSolvingFunction(uint8_t method);
+    auto GetSolvingFunction(int32_t method);
     void GetTaskType(const char *type);
+    void GetMethod(const char *method);
     void PrintResults(std::chrono::microseconds duration, uint32_t res);
 };
 

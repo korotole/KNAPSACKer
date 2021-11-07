@@ -233,6 +233,33 @@ ExecutionController.cpp.s:
 	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ExecutionController.cpp.s
 .PHONY : ExecutionController.cpp.s
 
+FPTAS.o: FPTAS.cpp.o
+
+.PHONY : FPTAS.o
+
+# target to build an object file
+FPTAS.cpp.o:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/FPTAS.cpp.o
+.PHONY : FPTAS.cpp.o
+
+FPTAS.i: FPTAS.cpp.i
+
+.PHONY : FPTAS.i
+
+# target to preprocess a source file
+FPTAS.cpp.i:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/FPTAS.cpp.i
+.PHONY : FPTAS.cpp.i
+
+FPTAS.s: FPTAS.cpp.s
+
+.PHONY : FPTAS.s
+
+# target to generate assembly for a file
+FPTAS.cpp.s:
+	cd /home/korale/Desktop/KOP/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/FPTAS.cpp.s
+.PHONY : FPTAS.cpp.s
+
 GreedyHeruistic.o: GreedyHeruistic.cpp.o
 
 .PHONY : GreedyHeruistic.o
@@ -335,6 +362,9 @@ help:
 	@echo "... ExecutionController.o"
 	@echo "... ExecutionController.i"
 	@echo "... ExecutionController.s"
+	@echo "... FPTAS.o"
+	@echo "... FPTAS.i"
+	@echo "... FPTAS.s"
 	@echo "... GreedyHeruistic.o"
 	@echo "... GreedyHeruistic.i"
 	@echo "... GreedyHeruistic.s"

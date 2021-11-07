@@ -22,8 +22,15 @@ src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/Common.h
 src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/Dynamic.h
 src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/ExecutionController.cpp
 src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/ExecutionController.h
+src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/FPTAS.h
 src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/GreedyHeruistic.h
 src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/Knapsack.h
+
+src/CMakeFiles/src.dir/FPTAS.cpp.o: ../../src/Common.h
+src/CMakeFiles/src.dir/FPTAS.cpp.o: ../../src/Dynamic.h
+src/CMakeFiles/src.dir/FPTAS.cpp.o: ../../src/FPTAS.cpp
+src/CMakeFiles/src.dir/FPTAS.cpp.o: ../../src/FPTAS.h
+src/CMakeFiles/src.dir/FPTAS.cpp.o: ../../src/Knapsack.h
 
 src/CMakeFiles/src.dir/GreedyHeruistic.cpp.o: ../../src/Common.h
 src/CMakeFiles/src.dir/GreedyHeruistic.cpp.o: ../../src/GreedyHeruistic.cpp
@@ -39,6 +46,7 @@ src/CMakeFiles/src.dir/main.cpp.o: ../../src/BruteForce.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/Common.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/Dynamic.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/ExecutionController.h
+src/CMakeFiles/src.dir/main.cpp.o: ../../src/FPTAS.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/GreedyHeruistic.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/Knapsack.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/main.cpp
